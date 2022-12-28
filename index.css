@@ -4,6 +4,7 @@
   padding: 0;
   text-decoration: none;
   font-family: Georgia, "Times New Roman", Times, serif;
+  user-select: none;
 }
 body {
   background-color: #ebebeb;
@@ -159,10 +160,12 @@ main {
   border: 0;
   color: #999999;
   border-radius: 5px 0 0 5px;
+  cursor: pointer;
 }
 .search-container button {
   height: 35px;
   padding: 10px;
+  cursor: pointer;
   width: 75px;
   font-size: 12px;
   background-color: #97455f;
@@ -171,6 +174,101 @@ main {
   border: 0;
   border-radius: 0;
   /* margin-top: 2px; */
+}
+nav {
+  background-color: #97455f;
+  height: auto;
+  width: 100%;
+
+  border-radius: 5px 5px 0 0;
+}
+.nav-list {
+  /* color: #97455f; */
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+  flex-wrap: wrap;
+  min-height: 50px;
+  list-style-type: none;
+  font-size: 12px;
+  font-style: normal;
+}
+.nav-list a {
+  color: #ffffff;
+  /* background-color: #97455f; */
+  padding: 0 10px;
+  text-align: center;
+}
+.nav-item {
+  height: 100%;
+  min-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px 0 0 0;
+  display: grid;
+  place-items: center;
+}
+.nav-item:hover {
+  background-color: #6a3144;
+}
+.nav-links a:first-child {
+  border-radius: 5px 0 0 0;
+}
+.slider {
+  max-width: 900px;
+  margin: auto;
+  background-color: #333333;
+  height: 350px;
+  margin: 30px auto;
+}
+.sliderItem {
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  position: relative;
+}
+.slider img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.slider figcaption {
+  position: absolute;
+  width: 450px;
+  background-color: #adadad;
+  bottom: 0;
+  height: 115px;
+  right: 0;
+  display: flex;
+  padding: 20px 20px;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  color: #383838;
+}
+.slider figcaption h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+.slider figcaption q {
+  font-size: 16px;
+}
+.dots-list {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  margin: 20px 0;
+  list-style: none;
+}
+li.active {
+  background-color: #333333;
+}
+li.slide-dots {
+  width: 15px;
+  border: 3px solid #333333;
+  border-radius: 100%;
+  height: 15px;
 }
 @media only screen and (max-width: 1024px) {
 }
