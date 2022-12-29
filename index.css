@@ -7,7 +7,7 @@
   user-select: none;
 }
 body {
-  background-color: #ebebeb;
+  /* background-color: #ebebeb; */
   max-width: 1000px;
   margin: auto;
   width: 100%;
@@ -15,8 +15,9 @@ body {
 }
 header {
   width: 100%;
-  padding: 10px 20px;
+  padding: 0px 20px;
   height: auto;
+  max-height: 50px;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -57,7 +58,7 @@ header::after {
   flex: 1;
 }
 main {
-  padding: 0 20px;
+  /* padding: 0 20px; */
   width: 100%;
   height: auto;
 }
@@ -107,6 +108,8 @@ main {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 0 20px;
+  background-color: #ebebeb;
   height: auto;
   flex-wrap: wrap;
   align-items: center;
@@ -178,8 +181,10 @@ main {
 nav {
   background-color: #97455f;
   height: auto;
-  width: 100%;
-
+  /* width: 100%; */
+  margin: 0 20px;
+  position: relative;
+  z-index: 10 !important;
   border-radius: 5px 5px 0 0;
 }
 .nav-list {
@@ -340,7 +345,7 @@ li.slide-dots:hover {
   max-width: 440px;
   min-width: 280px;
   height: auto;
-  padding: 10px;
+  /* padding: 10px 10px 10px ; */
 }
 .testimonial h4 {
   font-size: 16px;
@@ -444,6 +449,8 @@ li.slide-dots:hover {
 }
 footer {
   width: 100%;
+  padding: 0 20px;
+  border-top: 5px solid #d2d2d2;
   height: auto;
   background-color: #ebebeb;
 }
@@ -453,6 +460,10 @@ footer {
   height: 100%;
   padding: 20px 20px 20px 0;
   min-width: 280px;
+}
+.w-900 {
+  max-width: 900px;
+  margin: auto;
 }
 .flex20 {
   flex: 20%;
@@ -522,14 +533,17 @@ footer p {
 .copyright {
   display: flex;
   width: 100%;
-  padding: 25px 15px;
+  flex-wrap: wrap;
+  padding: 25px 20px;
   height: auto;
+  max-height: 70px;
   justify-content: space-between;
 }
 .copy-left {
 }
 .copyright p {
   font-size: 12px;
+  line-height: 20px;
   color: #999999;
 }
 .copy-right {
@@ -539,6 +553,12 @@ footer p {
 @media only screen and (max-width: 800px) {
 }
 @media only screen and (max-width: 600px) {
+  header {
+    height: auto;
+  }
+  .copyright {
+    max-height: auto;
+  }
 }
 @media only screen and (max-width: 400px) {
 }
