@@ -224,7 +224,7 @@ nav {
   margin: auto;
   background-color: #333333;
   height: 350px;
-  margin: 30px auto;
+  margin: 30px auto 20px auto;
 }
 .sliderItem {
   width: 100%;
@@ -279,15 +279,15 @@ li.slide-dots:hover {
   background-color: #333333;
 }
 .square-card-contaier {
-  margin: 40px 0;
-  padding: 40px 0;
+  margin: 40px 0 20px 0;
+  padding: 40px 0 20px 0;
 }
 
 .horizontal-rule {
   height: 10px;
   max-width: 900px;
   margin: 0 auto;
-  background-color: #333333;
+  background-color: #ebebeb;
   text-align: center;
   position: relative;
 }
@@ -297,7 +297,7 @@ li.slide-dots:hover {
   left: 50%;
   margin-left: -75px;
   top: -12px;
-  background-color: #ebebeb;
+  background-color: #ffffff;
   padding: 5px 15px;
   font-size: 16px;
   width: 150px;
@@ -309,6 +309,15 @@ li.slide-dots:hover {
   justify-content: center;
   height: auto;
   gap: 7px;
+  margin-top: 35px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  height: auto;
+  gap: 20px;
   margin-top: 35px;
 }
 .flexItems {
@@ -355,6 +364,7 @@ li.slide-dots:hover {
 .testimonial button {
   color: #97455f;
   border: none;
+  background: transparent;
   cursor: pointer;
   padding: 10px 0;
 }
@@ -406,7 +416,7 @@ li.slide-dots:hover {
 }
 .pink-box {
   max-width: 900px;
-  margin: 20px auto 45px auto;
+  margin: 20px auto 50px auto;
   background-color: #97455f;
   display: flex;
   flex-wrap: wrap;
@@ -449,7 +459,7 @@ li.slide-dots:hover {
 }
 footer {
   width: 100%;
-  padding: 0 20px;
+  padding: 40px 20px;
   border-top: 5px solid #d2d2d2;
   height: auto;
   background-color: #ebebeb;
@@ -536,7 +546,8 @@ footer p {
   flex-wrap: wrap;
   padding: 25px 20px;
   height: auto;
-  max-height: 70px;
+  background-color: #ebebeb;
+  max-height: 63px;
   justify-content: space-between;
 }
 .copy-left {
