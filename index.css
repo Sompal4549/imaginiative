@@ -226,14 +226,14 @@ nav {
   /* max-width: 900px; */
 
   margin: 0 20px;
-  background-color: #333333;
+  /* background-color: #333333; */
   height: auto;
   /* margin: 30px auto 20px auto; */
 }
 .sliderItem {
   width: 100%;
   height: 100%;
-  padding: 30px;
+  padding: 30px 30px 0 30px;
   background-color: #ffffff;
   position: relative;
   z-index: 10;
@@ -249,7 +249,7 @@ nav {
   position: absolute;
   width: 450px;
   background-color: #adadad;
-  bottom: 116px;
+  bottom: 75px;
   height: 115px;
   right: 60px;
   display: flex;
@@ -395,7 +395,7 @@ li.slide-dots:hover {
   width: 100%;
   /* justify-content: center; */
   height: auto;
-  gap: 7px;
+  gap: 15px;
   margin-top: 35px;
   position: relative;
 }
@@ -578,6 +578,9 @@ footer p {
 .copy-right {
 }
 @media only screen and (max-width: 1024px) {
+  .slider figcaption {
+    bottom: 75px;
+  }
 }
 @media only screen and (max-width: 870px) {
   .FlexContainer {
@@ -586,10 +589,36 @@ footer p {
   }
   .flex20 {
     padding: 0;
+    min-width: 280px;
   }
   .testimonial-flex {
     /* flex-direction: column; */
     padding: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .pink-box {
+    margin: 20px 20px 40px 20px;
+    width: auto;
+  }
+  .square-card-contaier {
+    margin: 20px 20px 40px 20px;
+    width: auto;
+  }
+  .horizontal-cards {
+    padding-top: 40px;
+  }
+  footer {
+    /* width: 100% !important; */
+    min-width: 100%;
+  }
+  .flex20 {
+    padding: 20px 20px 20px 0;
+  }
+  .search-container form {
+    flex-direction: row;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -605,7 +634,7 @@ footer p {
     max-height: auto;
   }
   .slider figcaption {
-    width: 80%;
+    width: 70%;
   }
   .slider figcaption h2 {
     font-size: 1.2rem;
@@ -628,6 +657,10 @@ footer p {
   .footer-flex {
     flex-wrap: wrap;
   }
+  .slider-figcaption {
+    right: 30px !important;
+    bottom: 65px !important;
+  }
 }
 @media only screen and (max-width: 320px) {
   .verticalbar::after {
@@ -639,5 +672,14 @@ footer p {
   header {
     max-height: auto !important;
     height: auto !important;
+  }
+  .slider-figcaption {
+    height: 150px !important;
+    width: 70% !important;
+    right: 30px;
+    bottom: 30px;
+  }
+  .search-container form {
+    flex-direction: row;
   }
 }
