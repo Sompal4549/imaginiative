@@ -16,8 +16,8 @@ body {
 header {
   width: 100%;
   padding: 0px 20px;
-  height: auto;
-  max-height: 50px;
+  /* height: auto; */
+  height: 50px;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -118,28 +118,31 @@ main {
 .logo {
   display: flex;
   flex: 1;
-  /* align-items: center; */
+  align-items: center;
   /* justify-content: center; */
 }
-.logo::first-letter {
+.logo h1::first-letter {
   font-size: 36px;
   font-weight: 500;
 }
 .logo h1 {
   font-size: 26px;
   font-weight: 500;
-  position: relative;
+
+  margin-right: 10px;
   display: inline;
 }
-.logo h1::after {
+.logo span::before {
   content: "|";
   font-size: 31px;
   position: absolute;
-  top: -7px;
+  top: -5px;
   bottom: 0;
+  left: -10px;
 }
 .logo span {
   width: 120px;
+  position: relative;
   margin-left: 10px;
   font-size: 12px;
   color: #999999;
@@ -220,30 +223,35 @@ nav {
   border-radius: 5px 0 0 0;
 }
 .slider {
-  max-width: 900px;
-  margin: auto;
+  /* max-width: 900px; */
+
+  margin: 0 20px;
   background-color: #333333;
-  height: 350px;
-  margin: 30px auto 20px auto;
+  height: auto;
+  /* margin: 30px auto 20px auto; */
 }
 .sliderItem {
   width: 100%;
   height: 100%;
-  background-color: #333333;
+  padding: 30px;
+  background-color: #ffffff;
   position: relative;
+  z-index: 10;
 }
 .slider img {
   width: 100%;
-  height: 350px;
+  height: 360px;
+  min-height: 360px;
   object-fit: cover;
+  position: relative;
 }
 .slider figcaption {
   position: absolute;
   width: 450px;
   background-color: #adadad;
-  bottom: 0;
+  bottom: 116px;
   height: 115px;
-  right: 0;
+  right: 60px;
   display: flex;
   padding: 20px 20px;
   /* align-items: center; */
@@ -306,9 +314,18 @@ li.slide-dots:hover {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
+  height: auto;
+  gap: 15px;
+  margin-top: 35px;
+}
+.testimonial-flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
   height: auto;
-  gap: 7px;
+  gap: 20px;
   margin-top: 35px;
 }
 .flex {
@@ -480,7 +497,7 @@ footer {
   height: 100%;
   width: 20%;
   padding: 20px 0 20px 20px;
-  min-width: 280px;
+  /* min-width: 280px; */
 }
 footer input {
   width: 100%;
@@ -537,6 +554,7 @@ footer p {
 .footer-flex {
   display: flex;
   height: auto;
+
   gap: 10px;
   margin: 30px 0;
 }
@@ -561,17 +579,55 @@ footer p {
 }
 @media only screen and (max-width: 1024px) {
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 870px) {
+  .FlexContainer {
+    max-width: 600px;
+    margin: auto;
+  }
+  .flex20 {
+    padding: 0;
+  }
+  .testimonial-flex {
+    /* flex-direction: column; */
+    padding: 20px;
+  }
 }
 @media only screen and (max-width: 600px) {
   header {
-    height: auto;
+    max-height: auto !important;
+    height: auto !important;
+  }
+  .FlexContainer {
+    align-items: center;
+    justify-content: center;
   }
   .copyright {
     max-height: auto;
   }
+  .slider figcaption {
+    width: 80%;
+  }
+  .slider figcaption h2 {
+    font-size: 1.2rem;
+  }
+  .left h4 {
+    font-size: 24px;
+  }
+  .testimonial-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 400px) {
+  .footer-flex {
+    flex-wrap: wrap;
+  }
 }
 @media only screen and (max-width: 320px) {
   .verticalbar::after {
@@ -579,5 +635,9 @@ footer p {
     font-size: 20px;
     text-align: center;
     margin-left: 2px;
+  }
+  header {
+    max-height: auto !important;
+    height: auto !important;
   }
 }
